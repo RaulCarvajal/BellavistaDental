@@ -3,6 +3,7 @@
 <head>
     <title>Bienvenido Administrador</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/menuVertical.css">
 </head>
 <body>
 <h1>Opciones de administración</h1>
