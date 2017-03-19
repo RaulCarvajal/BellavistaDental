@@ -3,7 +3,7 @@
 <head>
     <title>Bienvenido Administrador</title>
     <meta charset="utf-8">
-    <link type="text/css" rel="stylesheet" href="../CSS/menuVerticalAdminitrador.css.css">
+    <link type="text/css" rel="stylesheet" href="../CSS/menuVerticalAdminitrador.css">
     <link type="text/css" rel="stylesheet" href="../CSS/styleIcons.css">
 </head>
 <body>
