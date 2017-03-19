@@ -2,8 +2,10 @@
 <html>
 <head>
     <title>Bienvenido Administrador</title>
+    <meta charset="utf-8">
 </head>
 <body>
+<h1>Opciones de administración</h1>
 <nav>
     <ul>
         <li><a href="#"><span></span> Inicio </a></li>
