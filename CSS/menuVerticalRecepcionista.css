@@ -1,0 +1,41 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+h1{
+    text-align: center;
+    font-family: Calibri, sans-serif;
+    font-weight: 400;
+    height: 60px;
+    width:100%;
+    background: #03A9F4;
+    line-height: 60px;
+    color:white;
+
+}
+nav {
+    width: 240px;
+    height: 700px;
+    background: #0277BD;
+}
+nav a {
+    text-decoration: none;
+    color:white;
+    padding: 20px;
+    padding-right: 100px;
+}
+nav ul li{
+    list-style-type: none;
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #236D7F;
+}
+nav ul li:hover{
+    background: #01579B;
+    transition: linear all 0.40s;
+    margin-left: 10px;
+
+}
+nav ul li:hover {
+    color:black;
+}

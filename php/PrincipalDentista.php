@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Bienvenido Dentista</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../CSS/menuVerticalDentista.css">
     <link rel="stylesheet" href="../CSS/styleIcons.css">
 </head>
