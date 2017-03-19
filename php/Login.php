@@ -3,8 +3,10 @@
 <head>
     <title>Iniciar Sesión</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css"  href="css/styleLogin.css">
 </head>
 <body>
+    <div id="cont">
     <h1>Bienvenido a Bellavista Dental</h1>
     <h3 class="Textos">Iniciar Sesión</h3>
 
@@ -17,6 +19,6 @@
         ¿No tienes usuario?
         <a target="_blank"> Registrate Aquí</a>
     </h5>
-
+    </div>
 </body>
 </html>
