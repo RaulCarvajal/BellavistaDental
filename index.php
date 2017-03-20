@@ -1,10 +1,15 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: RaulRCG
- * Date: 11/03/2017
- * Time: 08:38 PM
- */
-echo "My first PHP script!";
-
-?>
+<!DOCTYPE html>
+<head>
+    <title>Bellavista-Dental Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css"  href="css/styleLogin.css">
+    <link rel="stylesheet" type="text/css"  href="css/w3css.css">
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body background="IMG/fondoindx.jpg">
+    <?php
+        include('PHP/Login.php');
+    ?>
+</body>
+</html>

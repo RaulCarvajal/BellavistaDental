@@ -1,25 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Iniciar Sesión</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css"  href="../CSS/styleLogin.css">
-
-</head>
 <body>
+<div id="div1" class="w3-animate-opacity col-md-6 col-md-offset-3 w3-border divP">
+    <div class="w3-container w3-blue margenArriba ">
+        <h1 class="text-center">Bienvenido a</h1>
+        <img src="IMG/logo.jpg" class="center-block w3-round">
+        <h2 class="text-center">Inicio de sesíon</h2>
+    </div>
+    <title>Iniciar Sesión</title>
     <div id="cont">
-    <h1>Bienvenido a Bellavista Dental</h1>
-    <h3 class="Textos">Iniciar Sesión</h3>
+        <form class="w3-container">
+            <label class="w3-label w3-text-blue"><b><h3>Usuario</h3></b></label>
+            <input name="txtusuario" class="w3-input w3-border w3-light-grey" type="text">
 
-    <form>
-        <input type="text" name="txtusuario" placeholder="Usuario"> <br>
-        <input type="password" name="txtcontra" placeholder="Contraseña">
-    </form>
-    <input type="submit" name="Enviar" value="Iniciar Sesión">
-    <h5>
-        ¿No tienes usuario?
-        <a target="_blank"> Registrate Aquí</a>
-    </h5>
+            <label class="w3-label w3-text-blue"><b><h3>Contraseña</h3></b></label>
+            <input name="txtcontra" class="w3-input w3-border w3-light-grey" type="password">
+
+            <input class="w3-btn w3-blue-grey margenArriba" type="submit" name="Enviar" value="Iniciar Sesión">
+            <input class="w3-btn w3-blue-grey margenArriba margenLateral" type="reset">
+
+            <h4>¿No tienes usuario?<a target="_blank" href=""> Registrate Aquí</a></h4>
+        </form>
     </div>
 </body>
-</html>
