@@ -20,6 +20,9 @@
                 <label class="w3-label w3-text-blue"><b><h3>Apellido</h3></b></label>
                 <input name="txtApellido" class="w3-input w3-border w3-light-grey" type="text">
 
+                <label class="w3-label w3-text-blue"><b><h3>Nombre de usuario</h3></b></label>
+                <input name="txtNombreUsu" class="w3-input w3-border w3-light-grey" type="text">
+
                 <label class="w3-label w3-text-blue"><b><h3>Contraseña</h3></b></label>
                 <input name="txtContraseña" class="w3-input w3-border w3-light-grey" type="password">
 
