@@ -19,13 +19,20 @@ if(isset($usuario)){
     $fila=mysql_fetch_array($resultado);
 
     //Si el usuario no existe o los datos son incorrectos
-    if(!$fila['id']){
+    if(!$fila['idUsuarios']){
         header("location:index.php");
     }//Si el usuario no existe o los datos son incorrectos
 
     else{
+     $_SESSION['idUsuarios']=$fila['idUsuarios'];
+     $_SESSION['Nombre_Usuario']=$fila['Nombre_Usuario'];
 
+     header("Location:PrincipalPaciente.php");
     }
+}
+
+else {
+    header("location:index.php");
 }
 
 ?>
