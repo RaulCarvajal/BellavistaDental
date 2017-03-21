@@ -1,6 +1,6 @@
 <?php
 
-include('conexion.php');
+include('../conexion.php');
 $txtuser=$_POST['txtuser']; /*nombre para iniciar sesión tabla usuarios*/
 $txtcontrasena=$_POST['txtcontrasena'];
 //TABLA PACIENTES
