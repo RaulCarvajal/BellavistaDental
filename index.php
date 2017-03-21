@@ -9,7 +9,6 @@
 </head>
 <body background="IMG/fondoindx.jpg">
     <?php
-        require('PHP/controladores/conexion.php');
         include('PHP/Login.php');
     ?>
 </body>

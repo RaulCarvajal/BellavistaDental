@@ -1,38 +1,67 @@
 <?php
+error_reporting(E_ALL & ~E_NOTICE);
+//FUNCION QUE RECIBE LAS VARIABLES QUE CONTIENEN EL USUARIO  Y LA CONTRASENA
+function conexiones($user,$contra)
+{
+//DECLARAMOS LAS VARIABLES NECESARIAS PARA HACER LA CONEXION A LA BASE DE DATOS
+    $servidor= "localhost";
+    $usuario="root";
+    $clave="";
+    $base="proyectodental";
+//GUARDARMOS EN UNA VARIABLE LLAMADA CONEXION LA INSTRUCCION PARA CONECTAR A LA BASE DE DATOS
+    $conexion=@mysql_connect($servidor,$usuario,$clave);
+//SI LA INSTRUCCION ALMACENADA EN LA VARIABLE CONEXION SE EJECUTO CORRECTAMENTE
+    if($conexion)
+    {
+        //SELECCIONAMOS LA BASE DE DATOS CON LA QUE TRABAJAREMOS
 
-//recibimos los datos enviados desde el formulario
-$usuario= $_POST['txtusuario'];
-$contra= $_POST['txtcontra'];
+        mysql_select_db($base);
+    }
+    //CREAMOS UN QUERY QUE SELECCIONARA TODOS LOS REGISTROS QUE CONTENGAN EL USUARIO Y LA CLAVE QUE PROPORCIONAMOS
+    $sql="select * from usuarios where nombre_usuario='$user' and contrasena='$contra'";
 
-if(isset($usuario)){
-    $conex=mysql_connect("localhost","root","")
-        or die("No se pudo realizar la conexion");
-    mysql_select_db("proyectodental",$conex)
-        or die("Error con la base de datos");
+    // GUARDAMOS EN UNA VARIABLE LA INSTRUCCION PARA EJECUTAR EL QUERY
+    $ejecutar_sql=mysql_query($sql);
+    //CON LA FUNCION MYSQL_NUM_ROWS CONTAMOS LA CANTIDAD DE REGISTROS QUE NOS DIO LA CONSULTA
+    //SI EL NUMERO DE REGISTRO ES DIFERENTE A CERO
+    if(mysql_num_rows($ejecutar_sql)!=0)
+    {
+        session_start();
 
-    //Inicio de variables de secion
-    session_start();
+        $sql="select nombre_usuario from usuarios where where nombre_usuario='$user' and contrasena='$contra'";
 
-    //Consulta si los datos estan en la base
-    $consulta= "SELECT * FROM usuarios WHERE Nombre_Usuario='$Nombre_Usuario' AND Contrasena='$Contrasena'";
-    $resultado= mysql_query($consulta,$conex) or die (mysql_error());
-    $fila=mysql_fetch_array($resultado);
+        $result=mysql_query($sql);
+        while($array=mysql_fetch_assoc($result))
+        {
+            $arreglo[]=$array;
+        }
 
-    //Si el usuario no existe o los datos son incorrectos
-    if(!$fila['idUsuarios']){
-        header("location:index.php");
-    }//Si el usuario no existe o los datos son incorrectos
+        foreach ($row as $arreglo)
+        {
+            $_SESSION['nombre']=$row['nombre_usuario'];
+        }
 
-    else{
-     $_SESSION['idUsuarios']=$fila['idUsuarios'];
-     $_SESSION['Nombre_Usuario']=$fila['Nombre_Usuario'];
+        while(mysql_fetch_array($ejecutar_sql))
+        {
+            $_SESSION['usuario']=$usuario;
 
-     header("Location:PrincipalPaciente.php");
+        }
+        return true;
+    }
+
+    else
+    {
+        return false;
     }
 }
 
-else {
-    header("location:index.php");
+function verificar_usuario()
+{
+    session_start();
+    if($_SESSION['usuario'])
+    {
+        return true;
+    }
 }
 
 ?>

@@ -14,26 +14,27 @@
         </div>
         <div id="cont">
             <form class="w3-container" method="post" action="controladores/ControlRegistroUsuarioPaciente.php">
-                <label class="w3-label w3-text-blue"><b><h3>Nombre/s</h3></b></label>
-                <input name="txtnombrepac" class="w3-input w3-border w3-light-grey" type="text">
-
-                <label class="w3-label w3-text-blue"><b><h3>Apellido</h3></b></label>
-                <input name="txtapellido" class="w3-input w3-border w3-light-grey" type="text">
-
                 <label class="w3-label w3-text-blue"><b><h3>Nombre de usuario</h3></b></label>
-                <input name="txtuser" class="w3-input w3-border w3-light-grey" type="text">
+                <input class="w3-input w3-border w3-light-grey" type="text" name="txtuser" >
 
                 <label class="w3-label w3-text-blue"><b><h3>Contraseña</h3></b></label>
-                <input name="txtcontrasena" class="w3-input w3-border w3-light-grey" type="password">
+                <input class="w3-input w3-border w3-light-grey" type="password" name="txtcontrasena">
+
+                <label class="w3-label w3-text-blue"><b><h3>Nombre/s</h3></b></label>
+                <input class="w3-input w3-border w3-light-grey" type="text" name="txtnombrepac">
+
+                <label class="w3-label w3-text-blue"><b><h3>Apellido</h3></b></label>
+                <input class="w3-input w3-border w3-light-grey" type="text" name="txtapellido">
+
 
                 <label class="w3-label w3-text-blue"><b><h3>Correo electronico</h3></b></label>
-                <input name="txtcorreo" class="w3-input w3-border w3-light-grey" type="text">
+                <input class="w3-input w3-border w3-light-grey" type="text" name="txtcorreo">
 
                 <label class="w3-label w3-text-blue"><b><h3>Telefono(Con lada)</h3></b></label>
-                <input name="txttelefono" class="w3-input w3-border w3-light-grey" type="text">
+                <input class="w3-input w3-border w3-light-grey" type="text" name="txttelefono">
 
                 <label class="w3-label w3-text-blue"><b><h3>Fecha de nacimiento</h3></b></label>
-                <input name="txtfecnac" class="w3-input w3-border w3-light-grey" type="date">
+                <input class="w3-input w3-border w3-light-grey" type="date" name="txtfecnac">
 
                 <label class="w3-label w3-text-blue"><b><h3>Sexo</h3></b></label>
                 <select class="cmb" name="sexo" >
