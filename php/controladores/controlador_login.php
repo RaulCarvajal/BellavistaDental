@@ -12,6 +12,20 @@ if(isset($usuario)){
 
     //Inicio de variables de secion
     session_start();
+
+    //Consulta si los datos estan en la base
+    $consulta= "SELECT * FROM usuarios WHERE Nombre_Usuario='$Nombre_Usuario' AND Contrasena='$Contrasena'";
+    $resultado= mysql_query($consulta,$conex) or die (mysql_error());
+    $fila=mysql_fetch_array($resultado);
+
+    //Si el usuario no existe o los datos son incorrectos
+    if(!$fila['id']){
+        header("location:index.php");
+    }//Si el usuario no existe o los datos son incorrectos
+
+    else{
+
+    }
 }
 
 ?>
