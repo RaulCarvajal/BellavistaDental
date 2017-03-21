@@ -4,8 +4,14 @@
 $usuario= $_POST['txtusuario'];
 $contra= $_POST['txtcontra'];
 
+if(isset($usuario)){
+    $conex=mysql_connect("localhost","root","")
+        or die("No se pudo realizar la conexion");
+    mysql_select_db("proyectodental",$conex)
+        or die("Error con la base de datos");
 
-session_start();
-$_SESSION;
+    //Inicio de variables de secion
+    session_start();
+}
 
 ?>
