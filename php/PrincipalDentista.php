@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../CSS/menuVerticalDentista.css">
     <link rel="stylesheet" href="../CSS/styleIcons.css">
+    
 </head>
 <body>
 <h1>Bienvenido Dentista</h1>
@@ -17,6 +18,7 @@
         <li> <a href="#"><span><i class="icon icon-drawer2"></i></span>Inventario</a></li>
         <li> <a href="#"><span><i class="icon-cancel-circle"></i></span>Cerrar Sesión</a></li>
     </ul>
+    <img src="">
 </nav>
 
 </body>
