@@ -7,7 +7,7 @@
     </div>
     <title>Iniciar Sesión</title>
     <div id="cont">
-        <form class="w3-container" method="post" action=""><!-- Falta agregar la funcion de PHP que loggea usuarios-->
+        <form class="w3-container" method="post" action="controladores/controlador_login.php">
             <label class="w3-label w3-text-blue"><b><h3>Usuario</h3></b></label>
             <input name="txtusuario" class="w3-input w3-border w3-light-grey" type="text">
 

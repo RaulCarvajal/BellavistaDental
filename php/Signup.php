@@ -13,7 +13,7 @@
             <h1 class="text-center">Regristo a nuevo usario</h1>
         </div>
         <div id="cont">
-            <form class="w3-container" method="post" action=""><!-- Dentro del post va donde se insertan los registros-->
+            <form class="w3-container" method="post" action="controladores/ControlRegistroUsuarioPaciente.php">
                 <label class="w3-label w3-text-blue"><b><h3>Nombre/s</h3></b></label>
                 <input name="txtNombre" class="w3-input w3-border w3-light-grey" type="text">
 
