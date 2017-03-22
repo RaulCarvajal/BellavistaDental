@@ -17,6 +17,22 @@
         <li> <a href="#"><span><i class="icon icon-cancel-circle"></i></span> Cerrar Sesión</a></li>
     </ul>
 </nav>
+<div id="areaFuncion">
+    <?php
+    switch ($_GET['action'])
+    {
+        case 'verPacientes':
+            echo("<h2>Registros de pacientes</h2>");
+            include('consultas/plantillas/tabla.php');
+            break;
+
+        default:
+            # code...
+            break;
+    }
+    ?>
+
+</div>
 
 </body>
 </html>
