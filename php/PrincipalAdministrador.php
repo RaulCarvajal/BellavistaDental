@@ -11,10 +11,10 @@
 <nav>
     <ul>
         <li><a href="#"><span><i class="icon icon-home"></i></span> Inicio </a></li>
-        <li> <a href="#"><span><i class="icon icon-user"></i></span>Pacientes</a> </li>
-        <li> <a href="#"><span><i class="icon icon-mug"></i></span> Recepcionistas </a></li>
-        <li><a href="#"><span><i class="icon icon-aid-kit"></i></span> Dentistas</a></li>
-        <li> <a href="#"><span><i class="icon icon-cancel-circle"></i></span> Cerrar Sesión</a></li>
+        <li> <a href="pantallasAdmin/pacientes.php"><span><i class="icon icon-user"></i></span>Pacientes</a> </li>
+        <li> <a href="pantallasAdmin/recepcionista.php"><span><i class="icon icon-mug"></i></span> Recepcionistas </a></li>
+        <li><a href="pantallasAdmin/dentista.php"><span><i class="icon icon-aid-kit"></i></span> Dentistas</a></li>
+        <li> <a href="controladores/salir.php"><span><i class="icon icon-cancel-circle"></i></span> Cerrar Sesión</a></li>
     </ul>
 </nav>
 
