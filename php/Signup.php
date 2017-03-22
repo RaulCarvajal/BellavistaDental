@@ -14,6 +14,7 @@
         </div>
         <div id="cont">
             <form class="w3-container" method="post" action="controladores/ControlRegistroUsuarioPaciente.php">
+
                 <label class="w3-label w3-text-blue"><b><h3>Nombre de usuario</h3></b></label>
                 <input class="w3-input w3-border w3-light-grey" type="text" name="txtuser" >
 
@@ -39,7 +40,7 @@
                 <label class="w3-label w3-text-blue"><b><h3>Sexo</h3></b></label>
                 <select class="cmb" name="sexo" >
                     <option value="null">Seleccionar uno</option>
-                    <option value="Masculino">>Maculino</option>
+                    <option value="Masculino">Maculino</option>
                     <option value="Femenino">Femenino</option>
                 </select><br>
 

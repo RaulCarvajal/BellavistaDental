@@ -14,14 +14,14 @@
         <li> <a href="#"><span><i class="icon icon-book"></i></span>Agenda Dentista</a> </li>
         <li> <a href="#"><span></span>Registro</a>
             <ul>
-                <li><a href="#"><span><i class="icon icon-user"></i></span>Paciente</a></li>
-                <li><a href="#"><span><i class="icon icon-aid-kit"></i></span>Dentista</a></li>
+                <li><a href="pantallasRecep/pacientes.php"><span><i class="icon icon-user"></i></span>Paciente</a></li>
+                <li><a href="pantallasRecep/dentista.php"><span><i class="icon icon-aid-kit"></i></span>Dentista</a></li>
             </ul>
         </li>
 
         <li> <a href="#"><span><i class="icon icon-address-book"></i></span>Recetas</a></li>
         <li> <a href="#"><span><i class="icon icon-drawer2"></i></span>Inventario</a></li>
-        <li> <a href="#"><span><i class="icon icon-cancel-circle"></i></span>Cerrar Sesión</a></li>
+        <li> <a href="controladores/salir.php"><span><i class="icon icon-cancel-circle"></i></span>Cerrar Sesión</a></li>
 
     </ul>
 </nav>
