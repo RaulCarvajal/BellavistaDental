@@ -1,5 +1,5 @@
 <?php
-include_once('controlador_login.php');
+include('controlador_login.php');
 if (verificar_usuario())
 {
     //si el usuario es verificado, se elimina los valores,se destruye la sesion y volvemos al formulario de ingreso
