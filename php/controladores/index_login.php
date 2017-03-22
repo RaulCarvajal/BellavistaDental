@@ -5,7 +5,7 @@ $clave=$_POST['txtcontra'];
 
 if(conexiones($usuario,$clave))
 {
-    header("location:../../cliente/index_cliente.php");
+    header("location:../PrincipalPaciente.php");
 }
 
 else
