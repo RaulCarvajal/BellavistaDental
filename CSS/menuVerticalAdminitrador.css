@@ -1,6 +1,7 @@
 *{
     margin:0px;
     padding:0px;
+
 }
 h1{
     text-align: center;
@@ -38,4 +39,36 @@ nav ul li:hover{
 }
 nav ul li:hover {
     color:black;
+}
+
+#areaFuncion
+{
+    background: white;
+    width: 84%;
+    height: 650px;
+}
+
+nav,#areaFuncion
+{
+    display: inline-block;
+    float: left;
+}
+
+#areaFuncion table
+{
+    border: 1px solid black;
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 90%;
+}
+
+#areaFuncion table th
+{
+    background: #0277BD;
+    color:white;
+}
+
+#areaFuncion table td
+{
+    border:1px solid black;
 }
