@@ -23,7 +23,7 @@
     switch ($_GET['action'])
     {
         case 'verPacientes':
-            echo("<h2>Registros de pacientes</h2>");
+            echo("<h2>Pacientes Registrados</h2>");
             include('consultas/plantillas/tabla.php');
             break;
 
