@@ -27,6 +27,7 @@ function conexiones($user,$contra)
     if(mysql_num_rows($ejecutar_sql)!=0)
     {
         session_start();
+     //   $_SESSION['sesion_iniciada']=true;
 
         $sql="select nombre_usuario from usuarios where where nombre_usuario='$user' and contrasena='$contra'";
 

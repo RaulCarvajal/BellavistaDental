@@ -1,3 +1,11 @@
+<?php
+include('controladores/controlador_login.php');
+if(!verificar_usuario())
+{
+
+    header('location:../index.php');
+}
+   ?>
 <!DOCTYPE html>
 <html>
 <head>
