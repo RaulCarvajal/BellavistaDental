@@ -5,10 +5,11 @@ $clave=$_POST['txtcontra'];
 
 if(conexiones($usuario,$clave))
 {
+
     header("location:../PrincipalPaciente.php");
 }
 
 else
 {
-    echo("FALLO EL INICIO DE SESION");
+    header("location:../../index.php");
 }
