@@ -10,7 +10,7 @@
 <body background="../IMG/fondoindx.jpg">
     <div id="div1" class="col-md-6 col-md-offset-3 w3-border divP">
         <div class="w3-container w3-blue margenArriba ">
-            <h1 class="text-center">Regristo a nuevo usario</h1>
+            <h1 class="text-center">Registro a nuevo usuario</h1>
         </div>
         <div id="cont">
             <form class="w3-container" method="post" action="controladores/ControlRegistroUsuarioPaciente.php">
@@ -24,7 +24,7 @@
                 <label class="w3-label w3-text-blue"><b><h3>Nombre/s</h3></b></label>
                 <input class="w3-input w3-border w3-light-grey" type="text" name="txtnombrepac" required>
 
-                <label class="w3-label w3-text-blue"><b><h3>Apellido</h3></b></label>
+                <label class="w3-label w3-text-blue"><b><h3>Apellido/s</h3></b></label>
                 <input class="w3-input w3-border w3-light-grey" type="text" name="txtapellido" required>
 
 
