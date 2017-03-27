@@ -9,18 +9,18 @@ $sexo=$_GET['sexo'];
 echo("<form method='post' action='consultas/funciones/modificar_paciente.php'>
  <h2>Datos del paciente</h2>
 <input type='hidden' name='id' value='$id'>
-<label>Nombre</label>	
+<label>Nombre(s)</label>	
 <input type='text' name='nombre' value='$nombre'>
-<label>Nombre</label>	
+<label>Apeliido(s)</label>	
 <input type='text' name='apelido' value='$apellido'>
-<label>Nombre</label>	
+<label>Correo</label>	
 <input type='text' name='correo' value='$correo'>
-<label>Nombre</label>	
+<label>Telefeno</label>	
 <input type='text' name='telefono' value='$telefono'>
-<label>Nombre</label>	
+<label>Sexo</label>	
 <select name='sexo'>
-  <option value='Femenino'>Femenino</option>
-  <option value='Masculino'>Masculino</option>
+  <option value='Femenino'>Masculino</option>
+  <option value='Masculino'>Femenino</option>
  </select>
 <input type='submit' value='modificar'>
 </form>");

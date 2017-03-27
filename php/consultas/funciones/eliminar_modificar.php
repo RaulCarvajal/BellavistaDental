@@ -10,9 +10,8 @@ $sql="delete from pacientes where idPacientes='$id'";
 
 if(mysql_query($sql))
 {
-    header("location:../../PrincipalAdministrador.php");
     echo("<script>window.alert('Registro eliminado correctamente')</script>");
-
+    header("location:../../PrincipalAdministrador.php?action=verPacientes");
 }
 else
 {

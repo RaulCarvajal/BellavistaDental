@@ -11,5 +11,5 @@ if($conexion)
    mysql_select_db($base);
   }
   else
-  	{echo("error")}
+  	{echo("error");}
  ?>

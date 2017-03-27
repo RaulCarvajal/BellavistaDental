@@ -12,8 +12,12 @@ $sql="update pacientes set Pac_nombre='$nombre',Pac_apellido='$apellido',Pac_cor
       
  if(mysql_query($sql))
  {
- echo("Paciente modificado correctamente");
+     header("location:../../PrincipalAdministrador.php?action=verPacientes");
+ //echo("Paciente modificado correctamente");
  }
+
+echo("<script>window.alert('Paciente Modificado correctamente')</script>");
+
 
 
  ?>
