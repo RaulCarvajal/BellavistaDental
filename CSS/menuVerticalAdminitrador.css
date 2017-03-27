@@ -72,3 +72,26 @@ nav,#areaFuncion
 {
     border:1px solid black;
 }
+
+#areaFuncion form input,#areaFuncion form label,#areaFuncion form select
+{
+    display: block;
+    margin-left: 35%;
+    margin-top: 5px;
+}
+
+#areaFuncion form
+{
+    width: 50%;
+    border:1px solid black;
+    margin-left: 35%;
+}
+
+#areaFuncion form h2
+{
+    display: block;
+
+    background: #0277BD;
+    text-align: center;
+    color: white;
+}

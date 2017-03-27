@@ -28,6 +28,7 @@ foreach ($arreglo as $row)
        <td>".$row['Pac_FecNac']."</td>
         <td>".$row['Pac_sexo']."</td>
       <td><a href='consultas/funciones/eliminar_modificar.php?action=eliminar&id=".$row['idPacientes']."'>Eliminar</a></td>
+      <td><a href='PrincipalAdministrador.php?action=modificar_paciente&id=".$row['idPacientes']."&nombre=".$row['Pac_nombre']."&apellido=".$row['Pac_apellido']."&correo=".$row['Pac_correo']."&telefono=".$row['Pac_telefono']."&sexo=".$row['Pac_sexo']."'>Modificar</a></td>
       </tr>";
 }
 

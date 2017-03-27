@@ -27,6 +27,11 @@
             include('consultas/plantillas/tabla.php');
             break;
 
+        case 'modificar_paciente':
+            echo("<h2>Modifica un paciente</h2>");
+            include('consultas/plantillas/modifica_paciente.php');
+            break;
+
         default:
             # code...
             break;
