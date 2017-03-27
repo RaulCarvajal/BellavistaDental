@@ -16,31 +16,31 @@
             <form class="w3-container" method="post" action="controladores/ControlRegistroUsuarioPaciente.php">
 
                 <label class="w3-label w3-text-blue"><b><h3>Nombre de usuario</h3></b></label>
-                <input class="w3-input w3-border w3-light-grey" type="text" name="txtuser" >
+                <input class="w3-input w3-border w3-light-grey" type="text" name="txtuser" required >
 
                 <label class="w3-label w3-text-blue"><b><h3>Contraseña</h3></b></label>
-                <input class="w3-input w3-border w3-light-grey" type="password" name="txtcontrasena">
+                <input class="w3-input w3-border w3-light-grey" type="password" name="txtcontrasena" required>
 
                 <label class="w3-label w3-text-blue"><b><h3>Nombre/s</h3></b></label>
-                <input class="w3-input w3-border w3-light-grey" type="text" name="txtnombrepac">
+                <input class="w3-input w3-border w3-light-grey" type="text" name="txtnombrepac" required>
 
                 <label class="w3-label w3-text-blue"><b><h3>Apellido</h3></b></label>
-                <input class="w3-input w3-border w3-light-grey" type="text" name="txtapellido">
+                <input class="w3-input w3-border w3-light-grey" type="text" name="txtapellido" required>
 
 
                 <label class="w3-label w3-text-blue"><b><h3>Correo electronico</h3></b></label>
-                <input class="w3-input w3-border w3-light-grey" type="text" name="txtcorreo">
+                <input class="w3-input w3-border w3-light-grey" type="email" name="txtcorreo" required>
 
                 <label class="w3-label w3-text-blue"><b><h3>Telefono(Con lada)</h3></b></label>
-                <input class="w3-input w3-border w3-light-grey" type="text" name="txttelefono">
+                <input class="w3-input w3-border w3-light-grey" type="text" name="txttelefono" required>
 
                 <label class="w3-label w3-text-blue"><b><h3>Fecha de nacimiento</h3></b></label>
-                <input class="w3-input w3-border w3-light-grey" type="date" name="txtfecnac">
+                <input class="w3-input w3-border w3-light-grey" type="date" name="txtfecnac" required>
 
                 <label class="w3-label w3-text-blue"><b><h3>Sexo</h3></b></label>
-                <select class="cmb" name="sexo" >
-                    <option value="null">Seleccionar uno</option>
-                    <option value="Masculino">Maculino</option>
+                <select required class="cmb" name="sexo">
+                    <option value="">Seleccionar uno</option>
+                    <option value="Masculino">Masculino</option>
                     <option value="Femenino">Femenino</option>
                 </select><br>
 
