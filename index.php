@@ -9,6 +9,7 @@
 </head>
 <body background="IMG/fondoindx.jpg">
     <?php
+
         include('PHP/Login.php');
     ?>
 </body>

@@ -8,6 +8,9 @@
     <link type="text/css" rel="stylesheet" href="../CSS/styleIcons.css">
 </head>
 <body>
+<?php
+    include ('php/Mensaje.php');
+?>
 <h1>Opciones de administración</h1>
 <nav>
     <ul>
