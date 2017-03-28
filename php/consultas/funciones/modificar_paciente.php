@@ -12,10 +12,13 @@ $sql="update pacientes set Pac_nombre='$nombre',Pac_apellido='$apellido',Pac_cor
       
  if(mysql_query($sql))
  {
+     include('../../Mensaje.php');
+     mensaje("registro modificado correctamente","index.php");
+
      echo("<script language='JavaScript'>
     
-          alert('Paciente Modificado correctamente');
-          window.location.href='../../PrincipalAdministrador.php?action=verPacientes';
+          
+          //window.location.href='../../PrincipalAdministrador.php?action=verPacientes';
           </script>");
 
 

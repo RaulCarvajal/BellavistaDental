@@ -29,6 +29,7 @@ $sql3="insert into Pacientes (Pac_Nombre, Pac_Apellido, Pac_correo, Pac_telefono
 
 if(mysql_query($sql3)){
     echo " se importaron a la tabla pacientes";
+    header("location:../../index.php");
 }
 else {echo " ERROR";}
 ?>

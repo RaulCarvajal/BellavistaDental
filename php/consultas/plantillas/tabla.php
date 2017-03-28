@@ -18,7 +18,7 @@ echo("<table>
 	<th>Eliminar</th>
 	   </thead>
 </tr>");
-foreach ($arreglo as $row) 
+foreach ($arreglo as $row)
 {
  echo"<tr>
       <td>".$row['Pac_nombre']."</td>
