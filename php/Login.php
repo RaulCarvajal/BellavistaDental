@@ -1,4 +1,4 @@
-<body>
+﻿<body>
 <div id="div1" class="w3-animate-opacity col-md-6 col-md-offset-3 w3-border divP">
     <div class="w3-container w3-blue margenArriba ">
         <h1 class="text-center">Bienvenido a</h1>
@@ -9,10 +9,10 @@
     <div id="cont">
         <form class="w3-container" method="post" action="php/controladores/index_login.php">
             <label class="w3-label w3-text-blue"><b><h3>Usuario</h3></b></label>
-            <input name="txtusuario" class="w3-input w3-border w3-light-grey" type="text" required>
+            <input name="txtusuario" class="w3-input w3-border w3-light-grey" type="text" required placeholder="Digite su nombre de usuario">
 
             <label class="w3-label w3-text-blue"><b><h3>Contraseña</h3></b></label>
-            <input name="txtcontra" class="w3-input w3-border w3-light-grey" type="password" required>
+            <input name="txtcontra" class="w3-input w3-border w3-light-grey" type="password" required placeholder="Digite su contraseña">
 
             <input class="w3-btn w3-blue-grey margenArriba" type="submit" name="Enviar" value="Iniciar Sesión">
             <input class="w3-btn w3-blue-grey margenArriba margenLateral" type="reset">
