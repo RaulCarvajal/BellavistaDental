@@ -3,10 +3,14 @@ include('../../conexion.php');
 if($_GET['action']=="eliminar")
 {
 $id=$_GET['id'];
-$sql="delete from pacientes where idPacientes='$id'";
+//$sql="delete from pacientes where idPacientes='$id'";
 
-//$sql="delete from pacientes p, usuarios u
-// where p.idUsuarios='$id' and u.IdUsuarios='$id'";
+//$sql="delete from usuarios  where idUsuarios='$id'";
+    $sql="update  usuarios set Status='inactivo'  where idUsuarios='$id'";
+echo($sql);
+/*
+$sql= "delete from pacientes  p, usuarios u where p"
+*/
 
 if(mysql_query($sql))
 {
@@ -16,6 +20,7 @@ if(mysql_query($sql))
 else
 {
 echo('Error');
+echo(mysql_error());
 }
 
 

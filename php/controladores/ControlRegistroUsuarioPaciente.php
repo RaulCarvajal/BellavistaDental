@@ -12,8 +12,8 @@ $txttelefono=$_POST['txttelefono'];
 $txtfecnac=$_POST['txtfecnac'];
 $sexo=$_POST['sexo'];
 //como hacer una variable autoincrementable sin necesidad
-$sql="insert into Usuarios(Contrasena, Nombre_Usuario, FechaRegistro, TipoUsuario )
-	values ('$txtcontrasena','$txtuser', now(),1)";
+$sql="insert into Usuarios(Contrasena, Nombre_Usuario, FechaRegistro, TipoUsuario,Status )
+	values ('$txtcontrasena','$txtuser', now(),1,'activo')";
 if(mysql_query($sql)){
     echo "se importaron a la tabla Usuarios";
 }
