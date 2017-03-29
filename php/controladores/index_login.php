@@ -3,10 +3,45 @@ include('controlador_login.php');
 $usuario=$_POST['txtusuario'];
 $clave=$_POST['txtcontra'];
 
+//DECLARAMOS LAS VARIABLES NECESARIAS PARA HACER LA CONEXION A LA BASE DE DATOS
+$servidor= "localhost";
+$usu="root";
+$cla="";
+$base="proyectodental";
+
+
+//GUARDARMOS EN UNA VARIABLE LLAMADA CONEXION LA INSTRUCCION PARA CONECTAR A LA BASE DE DATOS
+$conexion=@mysql_connect($servidor,$usu,$cla);
+//SI LA INSTRUCCION ALMACENADA EN LA VARIABLE CONEXION SE EJECUTO CORRECTAMENTE
+if($conexion)
+{
+    //SELECCIONAMOS LA BASE DE DATOS CON LA QUE TRABAJAREMOS
+
+    mysql_select_db($base);
+}
+//
+
+$tipo = mysql_query("select TipoUsuario from usuarios where nombre_usuario='$usuario' and contrasena='$clave'");
+$row = mysql_fetch_array($tipo);
+
 if(conexiones($usuario,$clave))
 {
 
+if($row['TipoUsuario']=="1") {
     header("location:../PrincipalPaciente.php");
+}
+
+    if($row['TipoUsuario']=="2") {
+        header("location:../PrincipalDentista.php");
+    }
+
+    if($row['TipoUsuario']=="3") {
+        header("location:../PrincipalRecepcionista.php");
+    }
+
+    if($row['TipoUsuario']=="4") {
+        header("location:../PrincipalAdministrador.php");
+    }
 }
 
 else

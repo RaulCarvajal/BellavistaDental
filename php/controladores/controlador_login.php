@@ -8,6 +8,8 @@ function conexiones($user,$contra)
     $usuario="root";
     $clave="";
     $base="proyectodental";
+
+
 //GUARDARMOS EN UNA VARIABLE LLAMADA CONEXION LA INSTRUCCION PARA CONECTAR A LA BASE DE DATOS
     $conexion=@mysql_connect($servidor,$usuario,$clave);
 //SI LA INSTRUCCION ALMACENADA EN LA VARIABLE CONEXION SE EJECUTO CORRECTAMENTE
@@ -30,6 +32,7 @@ function conexiones($user,$contra)
      //   $_SESSION['sesion_iniciada']=true;
 
         $sql="select nombre_usuario from usuarios where where nombre_usuario='$user' and contrasena='$contra'";
+
 
         $result=mysql_query($sql);
         while($array=mysql_fetch_assoc($result))
