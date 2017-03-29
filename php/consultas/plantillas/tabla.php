@@ -11,8 +11,8 @@ $arreglo[]=$array;
 }
 echo ("<select onchange='window.location=this.options[this.selectedIndex].value'>
   <option>Filtrar por</option>
-  <option value='index.php?action=reparacion_registros&&parametroFiltro=generador'>Activos</option>
-  <option value='index.php?action=reparacion_registros&&parametroFiltro=transductor'>Inactivos</option>
+  <option value='PrincipalAdministrador.php?action=verPacientes&&value='activo'>Activos</option>
+  <option value='PrincipalAdministrador.php?action=verPacientes&&value='inactivo''>Inactivos</option>
   </select>");
 
 echo("<table>
