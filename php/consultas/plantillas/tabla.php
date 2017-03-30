@@ -14,7 +14,7 @@ if($_GET['Status']=="inactivo")
     $sql="select idPacientes,Pac_nombre,Pac_apellido,Pac_correo,Pac_telefono,Pac_FecNac,Pac_sexo, pacientes.idUsuarios from pacientes
  inner join usuarios 
  on usuarios.idUsuarios=pacientes.idUsuarios
- where Status like 'inactivo'";
+ where Status like 'inactivo' ";
 
 }
 $result =mysql_query($sql);
