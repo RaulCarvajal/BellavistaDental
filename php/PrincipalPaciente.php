@@ -19,7 +19,7 @@ if(!verificar_usuario())
 <nav>
     <ul>
         <li><a href="#"><span><i class="icon icon-home"></i></span> Inicio </a></li>
-        <li> <a href="#"><span><i class="icon icon-address-book"></i></span>Citas</a> </li>
+        <li> <a href="/../Calendario/index.php"><span><i class="icon icon-address-book"></i></span>Citas</a> </li>
         <li> <a href="#"><span><i class="icon icon-file-text2"></i></span>Recetas</a></li>
         <li> <a href="controladores/salir.php"><span><i class="icon icon-cancel-circle"></i></span>Cerrar Sesión</a></li>
     </ul>
