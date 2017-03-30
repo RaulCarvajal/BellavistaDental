@@ -1,13 +1,14 @@
 <?php 
 include('conexion.php');
 if($_GET['Status']=="activo"||$_GET['Status']=="")
+//||$_GET['Status']==""
 {
     $sql="select idPacientes,Pac_nombre,Pac_apellido,Pac_correo,Pac_telefono,Pac_FecNac,Pac_sexo, pacientes.idUsuarios from pacientes
  inner join usuarios 
  on usuarios.idUsuarios=pacientes.idUsuarios
  where Status like 'activo' ";
 
-}
+}//Para los que están activos
 
 if($_GET['Status']=="inactivo")
 {
@@ -16,7 +17,8 @@ if($_GET['Status']=="inactivo")
  on usuarios.idUsuarios=pacientes.idUsuarios
  where Status like 'inactivo' ";
 
-}
+}//para los que están en inactivo
+
 $result =mysql_query($sql);
 while($array=mysql_fetch_assoc($result))
 {
@@ -40,6 +42,7 @@ echo("<table>
 	<th>Eliminar</th>
 	   </thead>
 </tr>");
+
 foreach ($arreglo as $row)
 {
  echo"<tr>
