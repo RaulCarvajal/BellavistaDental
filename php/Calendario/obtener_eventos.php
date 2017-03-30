@@ -23,11 +23,11 @@
 include 'config.php'; 
 
 // Sentencia sql para traer los eventos desde la base de datos
-$sql="SELECT * FROM eventos"; 
+$sql="SELECT * FROM eventos";
 
 // Verificamos si existe un dato
 if ($conexion->query($sql)->num_rows)
-{ 
+{
 
     // creamos un array
     $datos = array(); 
