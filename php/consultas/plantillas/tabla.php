@@ -1,9 +1,22 @@
 <?php 
 include('conexion.php');
-$sql="select idPacientes,Pac_nombre,Pac_apellido,Pac_correo,Pac_telefono,Pac_FecNac,Pac_sexo, pacientes.idUsuarios from pacientes
+if($_GET['Status']=="activo"||$_GET['Status']=="")
+{
+    $sql="select idPacientes,Pac_nombre,Pac_apellido,Pac_correo,Pac_telefono,Pac_FecNac,Pac_sexo, pacientes.idUsuarios from pacientes
  inner join usuarios 
  on usuarios.idUsuarios=pacientes.idUsuarios
- where Status like 'activo'";
+ where Status like 'activo' ";
+
+}
+
+if($_GET['Status']=="inactivo")
+{
+    $sql="select idPacientes,Pac_nombre,Pac_apellido,Pac_correo,Pac_telefono,Pac_FecNac,Pac_sexo, pacientes.idUsuarios from pacientes
+ inner join usuarios 
+ on usuarios.idUsuarios=pacientes.idUsuarios
+ where Status like 'inactivo' ";
+
+}
 $result =mysql_query($sql);
 while($array=mysql_fetch_assoc($result))
 {
@@ -11,8 +24,8 @@ $arreglo[]=$array;
 }
 echo ("<select onchange='window.location=this.options[this.selectedIndex].value'>
   <option>Filtrar por</option>
-  <option value='PrincipalAdministrador.php?action=verPacientes&&value='activo'>Activos</option>
-  <option value='PrincipalAdministrador.php?action=verPacientes&&value='inactivo''>Inactivos</option>
+  <option value='PrincipalAdministrador.php?action=verPacientes&&Status=activo''>Activos</option>
+  <option value='PrincipalAdministrador.php?action=verPacientes&&Status=inactivo''>Inactivos</option>
   </select>");
 
 echo("<table>
@@ -40,7 +53,6 @@ foreach ($arreglo as $row)
       <td><a href='PrincipalAdministrador.php?action=modificar_paciente&id=".$row['idPacientes']."&nombre=".$row['Pac_nombre']."&apellido=".$row['Pac_apellido']."&correo=".$row['Pac_correo']."&telefono=".$row['Pac_telefono']."&sexo=".$row['Pac_sexo']."'>Modificar</a></td>
       </tr>";
 }
-
 echo("</table>");
 ?>
 
