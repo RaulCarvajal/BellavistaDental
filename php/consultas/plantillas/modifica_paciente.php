@@ -11,7 +11,7 @@ echo("<form method='post' action='consultas/funciones/modificar_paciente.php'>
 <input type='hidden' name='id' value='$id' required>
 <label>Nombre(s)</label>	
 <input type='text' name='nombre' value='$nombre' required>
-<label>Apeliido(s)</label>	
+<label>Apellido(s)</label>	
 <input type='text' name='apelido' value='$apellido' required>
 <label>Correo</label>	
 <input type='text' name='correo' value='$correo' required>
