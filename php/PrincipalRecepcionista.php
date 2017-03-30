@@ -7,9 +7,10 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../CSS/menuVerticalRecepcionista.css">
     <link rel="stylesheet" href="../CSS/styleIcons.css">
+    <link type="text/css" rel="stylesheet" href="../CSS/imagen.css">
 </head>
 <body>
-<h1>Bienvenido Recepcionista</h1>
+<h1>Bienvenido Recepcionista <span><img src="../IMG/logo.jpg" class="imagen"></h1>
 <nav>
     <ul>
         <li><a href="#"><span><i class="icon icon-home"></i></span> Inicio </a></li>

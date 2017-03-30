@@ -6,12 +6,13 @@
     <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="../CSS/menuVerticalAdminitrador.css">
     <link type="text/css" rel="stylesheet" href="../CSS/styleIcons.css">
+    <link type="text/css" rel="stylesheet" href="../CSS/imagen.css">
 </head>
 <body>
 <?php
     include ('php/Mensaje.php');
 ?>
-<h1>Opciones de administración</h1>
+<h1>Opciones de administración<span><img src="../IMG/logo.jpg" class="imagen"></span></h1>
 <nav>
     <ul>
         <li><a href=""><span><i class="icon icon-home"></i></span> Inicio </a></li>
