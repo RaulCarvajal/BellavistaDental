@@ -6,6 +6,8 @@ $apellido=$_GET['apellido'];
 $correo=$_GET['correo'];
 $telefono=$_GET['telefono'];
 $sexo=$_GET['sexo'];
+
+
 echo("<form method='post' action='consultas/funciones/modificar_paciente.php'>
  <h2>Datos del paciente</h2>
 <input type='hidden' name='id' value='$id' required>
