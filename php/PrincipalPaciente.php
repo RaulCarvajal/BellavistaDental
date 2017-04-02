@@ -3,7 +3,7 @@ include('controladores/controlador_login.php');
 if(!verificar_usuario())
 {
 
-    header('location:../index.php');
+   // header('location:../index.php');
 }
    ?>
 <!DOCTYPE html>
@@ -25,7 +25,26 @@ if(!verificar_usuario())
         <li> <a href="controladores/salir.php"><span><i class="icon icon-cancel-circle"></i></span>Cerrar Sesión</a></li>
     </ul>
 </nav>
+
 <div id="areaFuncion">
+    <?php
+    switch ($_GET['action'])
+    {
+        case 'verCitas':
+            include('citas/verCitas.php');
+            break;
+
+        case 'agendaCita':
+            include('citas/agendaCita.php');
+            break;
+
+        default:
+            # code...
+            break;
+    }
+    ?>
+</div>
+
 
 </body>
 </html>
