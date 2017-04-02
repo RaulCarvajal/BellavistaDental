@@ -6,14 +6,27 @@ $id=$_POST['idUsuarios'];
 //$sql="delete from pacientes where idPacientes='$id'";
 
 //$sql="delete from usuarios  where idUsuarios='$id'";
-    $sql="update  usuarios set Status='inactivo'  where idUsuarios='$id'";
+    if($_POST['Status']=="1"){
+        $sql="update  usuarios set Status='inactivo'  where idUsuarios='$id'";
+    }
+    else{
+        $sql="update  usuarios set Status='activo'  where idUsuarios='$id'";
+    }
+
+
 /*
 $sql= "delete from pacientes  p, usuarios u where p"
 */
 
 if(mysql_query($sql))
 {
-    echo("El paciente ha sido desactivado-PrincipalAdmnistrador.php?action=verPacientes");
+    if($_POST['Status']==1){
+        echo("El paciente ha sido desactivado-PrincipalAdmnistrador.php?action=verPacientes");
+    }
+    else{
+        echo("El paciente ha sido activado-PrincipalAdmnistrador.php?action=verPacientes");
+    }
+
 }
 else
 {

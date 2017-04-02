@@ -58,7 +58,7 @@ $(function () {
     })
 });
 
-function confirmar(idUsuarios) {
+function confirmar(idUsuarios,Status) {
     $('#confirmar').animate({
         top: '0%'
     });
@@ -71,13 +71,14 @@ function confirmar(idUsuarios) {
         $('#confirmar').animate({
             top: '-100%'
         });
-        eliminar(idUsuarios);
+        eliminar(idUsuarios,Status);
     })
 }
-function eliminar(idUsuarios) {
+function eliminar(idUsuarios,Status) {
     var formData = new FormData();
     formData.append("idUsuarios", idUsuarios);
     formData.append("action","eliminar");
+    formData.append("Status",Status);
     $.ajax({
         url:"consultas/funciones/eliminar_modificar.php",
         type:"post",

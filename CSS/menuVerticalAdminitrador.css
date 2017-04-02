@@ -85,6 +85,12 @@ nav,#areaFuncion
     border:1px solid black;
 }
 
+#areaFuncion table td a {
+    color:blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #areaFuncion form input,#areaFuncion form label,#areaFuncion form select
 {
     display: block;

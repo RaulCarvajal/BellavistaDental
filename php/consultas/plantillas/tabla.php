@@ -3,7 +3,7 @@ include('conexion.php');
 if($_GET['Status']=="activo"||$_GET['Status']=="")
 //||$_GET['Status']==""
 {
-    $sql="select idPacientes,Pac_nombre,Pac_apellido,Pac_correo,Pac_telefono,Pac_FecNac,Pac_sexo, pacientes.idUsuarios from pacientes
+    $sql="select Status,idPacientes,Pac_nombre,Pac_apellido,Pac_correo,Pac_telefono,Pac_FecNac,Pac_sexo, pacientes.idUsuarios from pacientes
  inner join usuarios 
  on usuarios.idUsuarios=pacientes.idUsuarios
  where Status like 'activo' ";
@@ -12,7 +12,7 @@ if($_GET['Status']=="activo"||$_GET['Status']=="")
 
 if($_GET['Status']=="inactivo")
 {
-    $sql="select idPacientes,Pac_nombre,Pac_apellido,Pac_correo,Pac_telefono,Pac_FecNac,Pac_sexo, pacientes.idUsuarios from pacientes
+    $sql="select Status,idPacientes,Pac_nombre,Pac_apellido,Pac_correo,Pac_telefono,Pac_FecNac,Pac_sexo, pacientes.idUsuarios from pacientes
  inner join usuarios 
  on usuarios.idUsuarios=pacientes.idUsuarios
  where Status like 'inactivo' ";
@@ -43,18 +43,28 @@ echo("<table>
 	   </thead>
 </tr>");
 
-foreach ($arreglo as $row)
-{
- echo"<tr>
-      <td>".$row['Pac_nombre']."</td>
-      <td>".$row['Pac_apellido']."</td>
-      <td>".$row['Pac_correo']."</td>
-      <td>".$row['Pac_telefono']."</td>
-       <td>".$row['Pac_FecNac']."</td>
-        <td>".$row['Pac_sexo']."</td>
-      <td><a onclick='confirmar(".$row['idUsuarios'].")'>Eliminar</a></td>
-      <td><a href='PrincipalAdministrador.php?action=modificar_paciente&id=".$row['idPacientes']."&nombre=".$row['Pac_nombre']."&apellido=".$row['Pac_apellido']."&correo=".$row['Pac_correo']."&telefono=".$row['Pac_telefono']."&sexo=".$row['Pac_sexo']."'>Modificar</a></td>
-      </tr>";
+foreach ($arreglo as $row) {
+    echo "<tr>
+      <td>" . $row['Pac_nombre'] . "</td>
+      <td>" . $row['Pac_apellido'] . "</td>
+      <td>" . $row['Pac_correo'] . "</td>
+      <td>" . $row['Pac_telefono'] . "</td>
+       <td>" . $row['Pac_FecNac'] . "</td>
+        <td>" . $row['Pac_sexo'] . "</td>";
+
+    $Status="";
+      
+      if($row['Status']=="activo"){
+          $Status="activo";
+          echo("<td><a onclick='confirmar(" .$row['idUsuarios']. ",1)'>Inactivar</a></td>");
+      }
+      else {
+          $Status="inactivo";
+          echo("<td><a onclick='confirmar(" .$row['idUsuarios']. ",2)'>Activar</a></td>");
+      }
+      echo("<td><a href='PrincipalAdministrador.php?action=modificar_paciente&id=" . $row['idPacientes'] . "&nombre=" . $row['Pac_nombre'] . "&apellido=" . $row['Pac_apellido'] . "&correo=" . $row['Pac_correo'] . "&telefono=" . $row['Pac_telefono'] . "&sexo=" . $row['Pac_sexo'] . "'>Modificar</a></td>
+      </tr>");
+
 }
 echo("</table>");
 ?>
