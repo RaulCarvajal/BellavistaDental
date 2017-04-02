@@ -2,8 +2,7 @@
 include('controladores/controlador_login.php');
 if(!verificar_usuario())
 {
-
-   // header('location:../index.php');
+    header('location:../index.php');
 }
    ?>
 <!DOCTYPE html>
@@ -14,6 +13,8 @@ if(!verificar_usuario())
     <link rel="stylesheet" href="../CSS/menuVerticalPaciente.css">
     <link rel="stylesheet" href="../CSS/styleIcons.css">
     <link type="text/css" rel="stylesheet" href="../CSS/imagen.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="consultas/funciones/manejador.js"></script>
 </head>
 <body>
 <h1>Bienvenido Paciente <span><img src="../IMG/logo.jpg" class="imagen"></h1>

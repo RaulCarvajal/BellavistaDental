@@ -23,6 +23,13 @@ $(function () {
                padre.innerHTML=resultado[0];
            })
    })
+    $('#formFecha').on('submit',function (e) {
+        e.preventDefault();
+        var fecha=document.getElementById('fecha_cita').value;
+        var asunto=document.getElementById('asunto').value;
+        var idUsuarios=document.getElementById('idUsuario').value;
+        window.location.replace('PrincipalPaciente.php?action=agendaCita&fecha='+fecha+"&asunto="+asunto+"&idUsuarios="+idUsuarios);
+    })
     $('#cerrarMensaje').click(function () {
         $('#mensaje').animate({
             top:'-100%'
@@ -75,6 +82,31 @@ function confirmar(idUsuarios,Status) {
     })
 }
 function eliminar(idUsuarios,Status) {
+    var formData = new FormData();
+    formData.append("idUsuarios", idUsuarios);
+    formData.append("action","eliminar");
+    formData.append("Status",Status);
+    $.ajax({
+        url:"consultas/funciones/eliminar_modificar.php",
+        type:"post",
+        datatype:'html',
+        data:formData,
+        cache:false,
+        contentType:false,
+        processData:false
+    })
+
+        .done(function (res) {
+            $('#mensaje').animate({
+                top:'0%'
+            });
+            var resultado=res.split("-");
+            direccion=resultado[1];
+            var padre=document.getElementById('cuerpoMensaje');
+            padre.innerHTML=resultado[0];
+        })
+}
+function agendaCita(hora,dentista) {
     var formData = new FormData();
     formData.append("idUsuarios", idUsuarios);
     formData.append("action","eliminar");

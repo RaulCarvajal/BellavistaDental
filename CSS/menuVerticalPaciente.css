@@ -46,6 +46,7 @@ nav ul li:hover {
     height: 650px;
     position: relative;
     top:-70px;
+    overflow-y: scroll;
 
 }
 
@@ -240,4 +241,38 @@ nav,#areaFuncion
 }
 #notaGris {
     float: right;
+}
+#horarioD tr
+{
+    height: 40px;
+    color: white;
+    text-align: center;
+    background: #0369b2;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#horarioD tr:hover
+{
+    background: #0072c6;
+}
+
+#horarioL tr
+{
+    height: 40px;
+    color: white;
+    text-align: center;
+    background: #0369b2;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#horarioL tr:hover
+{
+    background: #0072c6;
+}
+
+.reservado
+{
+    background: gray;
 }

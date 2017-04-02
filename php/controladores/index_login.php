@@ -28,7 +28,16 @@ if(conexiones($usuario,$clave))
 {
 
 if($row['TipoUsuario']=="1") {
-    header("location:../PrincipalPaciente.php");
+    $sql="select idPacientes from pacientes
+    inner join usuarios
+    on usuarios.idUsuarios=pacientes.idUsuarios
+    where nombre_usuario='$usuario' and contrasena ='$clave' ";
+
+    $result=mysql_query($sql);
+    $id=mysql_fetch_array($result);
+    $_SESSION['idPacientes']=$id['idPacientes'];
+
+    header("refresh:1;url=../PrincipalPaciente.php");
 }
 
     if($row['TipoUsuario']=="2") {

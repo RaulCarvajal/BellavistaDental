@@ -1,5 +1,16 @@
+<?php
+    error_reporting(E_ERROR | E_PARSE);
+    include('conexion.php')
+?>
 <h2>Agenda una cita</h2>
 <div id="col1">
+    <?php
+        $sql= "select hora from citas where fecha='".$_GET['fecha']."'";
+        $result=mysql_query($sql);
+        while($array=mysql_fetch_array($result)){
+            $arreglo[]=$array;
+        }
+    ?>
     <script>
         function horario1()
         {
@@ -94,13 +105,17 @@
         //establecemos la fecha maxima con 1 mes a partir del dia actual
         $fecha_max = date('Y-m-d', strtotime('+1 month', strtotime($fecha_sistema)));
     ?>
-    <form id='formFecha'>
-        <input type="date" name="fecha" min="<?php echo  $fecha_min; ?>" max="<?php echo $fecha_max;   ?>";  required>
+    <form id='formFecha' type="post">
+        <input id="fecha_cita" type="date" name="fecha" min="<?php echo  $fecha_min; ?>" max="<?php echo $fecha_max;   ?>";  required>
+        <input type="text" placeholder="Asunto" id="asunto" required>
+        <input type="text" id="idUsuario" value="<?php echo($_SESSION['idPacientes']) ?>">
         <input type="submit">
+
     </form>
+
 </div>
 <div id="col2">
-    <h3>Paso 2: Selecciona una hora</h3>
+    <h3>Paso 3: Selecciona una hora</h3>
     <div id="notacion">
         <article id="notaAzul"><h3>Disponible</h3></article>
         <div id="bloqueAzul"></div>
@@ -109,25 +124,73 @@
         <article id="notaGris"><h3>No disponible</h3></article>
         <div id="bloqueGris"></div>
     </div>
-    <table>
+    <table id="horarioD">
         <tr><th>Dentista: Dalia Lopez </th></tr>
-        <tr><td id="horario1" onclick="agendaCita(1)">10:00-10:30</td></tr>
-        <tr><td id="horario2" onclick="agendaCita(2)">10:30-11:00</td></tr>
-        <tr><td id="horario3" onclick="agendaCita(3)">11:00-11:30</td></tr>
-        <tr><td id="horario4" onclick="agendaCita(4)">11:30-12:00</td></tr>
-        <tr><td id="horario5" onclick="agendaCita(5)">12:00-12:30</td></tr>
-        <tr><td id="horario6" onclick="agendaCita(6)">12:30-13:00</td></tr>
+        <tr><td id="horario1" onclick="agendaCita(1,2)">10:00-10:30</td></tr>
+        <tr><td id="horario2" onclick="agendaCita(2,2)">10:30-11:00</td></tr>
+        <tr><td id="horario3" onclick="agendaCita(3,2)">11:00-11:30</td></tr>
+        <tr><td id="horario4" onclick="agendaCita(4,2)">11:30-12:00</td></tr>
+        <tr><td id="horario5" onclick="agendaCita(5,2)">12:00-12:30</td></tr>
+        <tr><td id="horario6" onclick="agendaCita(6,2)">12:30-13:00</td></tr>
     </table>
 
-    <table>
+    <table id="horarioL">
         <tr><th>Dentista: Luis Galaviz </th></tr>
-        <tr><td id="horario7" onclick="agendaCita(7)">15:00-15:30</td></tr>
-        <tr><td id="horario8" onclick="agendaCita(8)">15:30-16:00</td></tr>
-        <tr><td id="horario9" onclick="agendaCita(9)">16:00-16:30</td></tr>
-        <tr><td id="horario10" onclick="agendaCita(10)">16:30-17:00</td></tr>
-        <tr><td id="horario11" onclick="agendaCita(11)">17:00-17:30</td></tr>
-        <tr><td id="horario12" onclick="agendaCita(12)">17:30-18:00</td></tr>
-        <tr><td id="horario13" onclick="agendaCita(13)">18:00-18:30</td></tr>
-        <tr><td id="horario14" onclick="agendaCita(14)">18:30-19:00</td></tr>
+        <tr><td id="horario7" onclick="agendaCita(7,1)">15:00-15:30</td></tr>
+        <tr><td id="horario8" onclick="agendaCita(8,1)">15:30-16:00</td></tr>
+        <tr><td id="horario9" onclick="agendaCita(9,1)">16:00-16:30</td></tr>
+        <tr><td id="horario10" onclick="agendaCita(10,1)">16:30-17:00</td></tr>
+        <tr><td id="horario11" onclick="agendaCita(11,1)">17:00-17:30</td></tr>
+        <tr><td id="horario12" onclick="agendaCita(12,1)">17:30-18:00</td></tr>
+        <tr><td id="horario13" onclick="agendaCita(13,1)">18:00-18:30</td></tr>
+        <tr><td id="horario14" onclick="agendaCita(14,1)">18:30-19:00</td></tr>
     </table>
+    <?php
+        foreach ($arreglo as $row){
+            switch ($row['hora']){
+                case '10:00':
+                    echo ("<script>horario1();</script>");
+                    break;
+                case '10:30':
+                    echo ("<script>horario2();</script>");
+                    break;
+                case '11:00':
+                    echo ("<script>horario3();</script>");
+                    break;
+                case '11:30':
+                    echo ("<script>horario4();</script>");
+                    break;
+                case '12:00':
+                    echo ("<script>horario5();</script>");
+                    break;
+                case '12:30':
+                    echo ("<script>horario6();</script>");
+                    break;
+                case '15:00':
+                    echo ("<script>horario7();</script>");
+                    break;
+                case '15:30':
+                    echo ("<script>horario8();</script>");
+                    break;
+                case '16:00':
+                    echo ("<script>horario9();</script>");
+                    break;
+                case '16:30':
+                    echo ("<script>horario10();</script>");
+                    break;
+                case '17:00':
+                    echo ("<script>horario11();</script>");
+                    break;
+                case '17:30':
+                    echo ("<script>horario12();</script>");
+                    break;
+                case '18:00':
+                    echo ("<script>horario13();</script>");
+                    break;
+                case '18:30':
+                    echo ("<script>horario14();</script>");
+                    break;
+            }
+        }
+    ?>
 </div>
