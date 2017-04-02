@@ -108,11 +108,13 @@ function eliminar(idUsuarios,Status) {
 }
 function agendaCita(hora,dentista) {
     var formData = new FormData();
-    formData.append("idUsuarios", idUsuarios);
-    formData.append("action","eliminar");
-    formData.append("Status",Status);
+    formData.append("fecha", getUrlVars()["fecha"]);
+    formData.append("asunto",getUrlVars()["asunto"]);
+    formData.append("idUsuario",getUrlVars()['idUsuario']);
+    formData.append("hora",hora);
+    formData.append("dentista",dentista);
     $.ajax({
-        url:"consultas/funciones/eliminar_modificar.php",
+        url:"consultas/funciones/ingresaCita.php",
         type:"post",
         datatype:'html',
         data:formData,
