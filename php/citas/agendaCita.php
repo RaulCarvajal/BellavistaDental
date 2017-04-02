@@ -106,9 +106,9 @@
         $fecha_max = date('Y-m-d', strtotime('+1 month', strtotime($fecha_sistema)));
     ?>
     <form id='formFecha' type="post">
-        <input id="fecha_cita" type="date" name="fecha" min="<?php echo  $fecha_min; ?>" max="<?php echo $fecha_max;   ?>";  required>
-        <input type="text" placeholder="Asunto" id="asunto" required>
-        <input type="text" id="idUsuario" value="<?php echo($_SESSION['idPacientes']) ?>">
+        <input id="fecha_cita" value="<?php echo($_GET['fecha']) ?>" type="date" name="fecha" min="<?php echo  $fecha_min; ?>" max="<?php echo $fecha_max;   ?>";  required>
+        <input type="text" placeholder="Asunto" id="asunto" name="asunto" value="<?php echo($_GET['asunto']) ?>" required>
+        <input type="hidden" id="idUsuario" name="idUsuario" value="<?php echo($_SESSION['idPacientes']) ?>">
         <input type="submit">
 
     </form>

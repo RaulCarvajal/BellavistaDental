@@ -29,6 +29,7 @@ if(!verificar_usuario())
 
 <div id="areaFuncion">
     <?php
+    include ('Mensaje.php');
     switch ($_GET['action'])
     {
         case 'verCitas':

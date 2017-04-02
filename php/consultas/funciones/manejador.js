@@ -107,10 +107,7 @@ function eliminar(idUsuarios,Status) {
         })
 }
 function agendaCita(hora,dentista) {
-    var formData = new FormData();
-    formData.append("fecha", getUrlVars()["fecha"]);
-    formData.append("asunto",getUrlVars()["asunto"]);
-    formData.append("idUsuario",getUrlVars()['idUsuario']);
+    var formData = new FormData(document.getElementById('formFecha'));
     formData.append("hora",hora);
     formData.append("dentista",dentista);
     $.ajax({

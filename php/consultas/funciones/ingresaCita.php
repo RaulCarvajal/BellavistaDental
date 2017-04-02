@@ -52,7 +52,7 @@ switch ($hora){
         break;
 }
 
-$sql_paciente="select * from citas where idPacientes = $idUsuario and status = 'activo' ";
+$sql_paciente="select * from citas where idPacientes = $idUsuario and status = 'activa' ";
 $result=mysql_query($sql_paciente);
 
 if (mysql_num_rows($result)!=0){
@@ -69,7 +69,7 @@ if(mysql_num_rows($result2)!=0){
 if($insertar==true){
     $sql_inserta="insert into citas (idDentistas, idPacientes, asunto, fecha,hora,status)
                   values ($dentista,$idUsuario, '$asunto','$fecha','$hora','activa')";
-    if (mysqli_query($sql_inserta)){
+    if (mysql_query($sql_inserta)){
         echo("Cita agendada correctamente");
     }
 }
