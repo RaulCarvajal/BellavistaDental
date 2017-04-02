@@ -46,6 +46,9 @@ nav ul li:hover {
     background: white;
     width: 84%;
     height: 650px;
+    position: relative;
+    top:-70px;
+
 }
 
 nav,#areaFuncion
@@ -53,12 +56,17 @@ nav,#areaFuncion
     display: inline-block;
     float: left;
 }
+#areaFuncion h2{
+    text-align: center;
+    position: relative;
+
+}
 
 #areaFuncion table
 {
     border: 1px solid black;
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 1%;
     width: 90%;
 }
 
@@ -84,7 +92,7 @@ nav,#areaFuncion
 {
     width: 50%;
     border:1px solid black;
-    margin-left: 35%;
+    margin-left: 25%;
 }
 
 #areaFuncion form h2
