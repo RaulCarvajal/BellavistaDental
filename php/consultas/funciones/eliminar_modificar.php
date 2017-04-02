@@ -1,21 +1,19 @@
 <?php 
 include('../../conexion.php');
-if($_GET['action']=="eliminar")
+if($_POST['action']=="eliminar")
 {
-$id=$_GET['id'];
+$id=$_POST['idUsuarios'];
 //$sql="delete from pacientes where idPacientes='$id'";
 
 //$sql="delete from usuarios  where idUsuarios='$id'";
     $sql="update  usuarios set Status='inactivo'  where idUsuarios='$id'";
-echo($sql);
 /*
 $sql= "delete from pacientes  p, usuarios u where p"
 */
 
 if(mysql_query($sql))
 {
-    echo("<script>window.alert('Registro eliminado correctamente')</script>");
-    header("location:../../PrincipalAdministrador.php?action=verPacientes");
+    echo("El paciente ha sido desactivado-PrincipalAdmnistrador.php?action=verPacientes");
 }
 else
 {

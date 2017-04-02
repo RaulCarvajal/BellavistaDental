@@ -18,9 +18,7 @@ $num=mysql_num_rows(mysql_query($sqlE));
 if($num==0){
     $sql="insert into Usuarios(Contrasena, Nombre_Usuario, FechaRegistro, TipoUsuario,Status )
 	values ('$txtcontrasena','$txtuser', now(),1,'activo')";
-    if(mysql_query($sql)){
-        echo "se importaron a la tabla Usuarios";
-    }
+
     $sql2= "select idUsuarios from Usuarios order by FechaRegistro desc limit 1";
     $resultado=mysql_query($sql2);
     while ($arreglo=mysql_fetch_array($resultado)) {
@@ -30,8 +28,7 @@ if($num==0){
 		values ('$txtnombrepac','$txtapellido','$txtcorreo','$txttelefono','$txtfecnac','$sexo',$idUsuario)";
 //echo $sql3;
     if(mysql_query($sql3)){
-        echo " se importaron a la tabla pacientes";
-        header("location:../../index.php");
+        echo("Usuario Registrado Correctamente-../index.php");
     }
     else {echo " ERROR";}
 }else{

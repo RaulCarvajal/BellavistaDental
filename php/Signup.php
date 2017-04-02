@@ -7,15 +7,21 @@
     <link rel="stylesheet" type="text/css"  href="../css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <script src="../JS/ValidarSU.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="consultas/funciones/manejador.js"></script>
+    <link rel="stylesheet" href="../CSS/menuVerticalAdminitrador.css">
 </head>
 <body background="../IMG/fondoindx.jpg">
+<?php
+include ('Mensaje.php');
+?>
     <div id="div1" class="col-md-6 col-md-offset-3 w3-border divP">
         <div class="w3-container w3-blue margenArriba ">
             <h1 class="text-center">Registro a nuevo usuario</h1>
             <img src="../IMG/logo.jpg" class="w3-round center-block">
         </div>
         <div id="cont">
-            <form class="w3-container" method="post" action="controladores/ControlRegistroUsuarioPaciente.php" onsubmit="return validar();">
+            <form class="w3-container" method="post"  id ='formularioRegistro' onsubmit="return validar();">
 
                 <label class="w3-label w3-text-blue"><b><h3>Nombre de usuario</h3></b></label>
                 <input class="w3-input w3-border w3-light-grey" type="text" placeholder="Solo letras y números" id="idUser" name="txtuser" required maxlength="40">
