@@ -13,7 +13,7 @@
 <h1>Bienvenido Recepcionista <span><img src="../IMG/logo.jpg" class="imagen"></h1>
 <nav>
     <ul>
-        <li><a href="#"><span><i class="icon icon-home"></i></span> Inicio </a></li>
+        <li><a href="PrincipalRecepcionista.php"><span><i class="icon icon-home"></i></span> Inicio </a></li>
         <li> <a href="#"><span><i class="icon icon-book"></i></span>Agenda Dentista</a> </li>
         <li> <a href="#"><span></span>Registro</a>
             <ul>
