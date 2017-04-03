@@ -1,5 +1,6 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ERROR | E_PARSE);
 //FUNCION QUE RECIBE LAS VARIABLES QUE CONTIENEN EL USUARIO  Y LA CONTRASENA
 function conexiones($user,$contra)
 {
