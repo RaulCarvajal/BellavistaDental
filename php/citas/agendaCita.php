@@ -42,7 +42,6 @@
             elemento.className ="reservado";
         }
 
-
         function horario6()
         {
             var elemento = document.getElementById("horario6");
