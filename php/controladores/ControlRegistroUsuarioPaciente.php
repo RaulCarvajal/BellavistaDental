@@ -18,6 +18,8 @@ $num=mysql_num_rows(mysql_query($sqlE));
 if($num==0){
     $sql="insert into Usuarios(Contrasena, Nombre_Usuario, FechaRegistro, TipoUsuario,Status )
 	values ('$txtcontrasena','$txtuser', now(),1,'activo')";
+    mysql_query($sql);
+
 
     $sql2= "select idUsuarios from Usuarios order by FechaRegistro desc limit 1";
     $resultado=mysql_query($sql2);

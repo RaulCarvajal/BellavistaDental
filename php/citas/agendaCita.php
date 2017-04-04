@@ -93,7 +93,7 @@
             elemento.className ="reservado";
         }
     </script>
-    <h3>Paso 1: Selecciona una fecha</h3>
+    <h3>Paso 1: Selecciona una fecha y un asunto</h3>
     <?php
         date_default_timezone_set('America/Mazatlan');
         //asignamos a una variable la fecha actual
@@ -109,13 +109,17 @@
         <input id="fecha_cita" value="<?php echo($_GET['fecha']) ?>" type="date" name="fecha" min="<?php echo  $fecha_min; ?>" max="<?php echo $fecha_max;   ?>";  required>
         <input type="text" placeholder="Asunto" id="asunto" name="asunto" value="<?php echo($_GET['asunto']) ?>" required>
         <input type="hidden" id="idUsuario" name="idUsuario" value="<?php echo($_SESSION['idPacientes']) ?>">
-        <input type="submit">
+        <input type="submit" value="Seleccionar">
 
     </form>
 
 </div>
+
 <div id="col2">
-    <h3>Paso 3: Selecciona una hora</h3>
+
+    <?php
+    if($_GET['fecha']!="") {
+        echo(' <h3>Paso 2: Selecciona una hora</h3>
     <div id="notacion">
         <article id="notaAzul"><h3>Disponible</h3></article>
         <div id="bloqueAzul"></div>
@@ -144,7 +148,10 @@
         <tr><td id="horario12" onclick="agendaCita(12,1)">17:30-18:00</td></tr>
         <tr><td id="horario13" onclick="agendaCita(13,1)">18:00-18:30</td></tr>
         <tr><td id="horario14" onclick="agendaCita(14,1)">18:30-19:00</td></tr>
-    </table>
+    </table>');
+    }
+    ?>
+
     <?php
         foreach ($arreglo as $row){
             switch ($row['hora']){
