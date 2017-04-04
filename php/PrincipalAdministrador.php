@@ -18,11 +18,11 @@
 <h1>Opciones de administración<span><img src="../IMG/logo.jpg" class="imagen"></span></h1>
 <nav>
     <ul>
-        <li><a href=""><span><i class="icon icon-home"></i></span> Inicio </a></li>
+        <li><a href="PrincipalAdministrador.php"><span><i class="icon icon-home"></i></span> Inicio </a></li>
         <li> <a href="PrincipalAdministrador.php?action=verPacientes"><span><i class="icon icon-user"></i></span>Pacientes</a> </li>
         <li> <a href="#"><span><i class="icon icon-mug"></i></span> Recepcionistas </a></li>
         <li><a href="#"><span><i class="icon icon-aid-kit"></i></span> Dentistas</a></li>
-        <li> <a href="#"><span><i class="icon icon-cancel-circle"></i></span> Cerrar Sesión</a></li>
+        <li> <a href="controladores/salir.php"><span><i class="icon icon-cancel-circle"></i></span> Cerrar Sesión</a></li>
     </ul>
 </nav>
 <div id="areaFuncion">

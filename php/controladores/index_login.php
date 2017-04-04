@@ -1,3 +1,4 @@
+<?php error_reporting(E_ERROR | E_PARSE); ?>
 <?php
 include('controlador_login.php');
 $usuario=$_POST['txtusuario'];

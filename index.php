@@ -1,3 +1,4 @@
+<?php error_reporting(E_ERROR | E_PARSE); ?>
 <!DOCTYPE html>
 <head>
     <title>Bellavista-Dental Login</title>
