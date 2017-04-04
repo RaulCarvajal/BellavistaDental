@@ -52,7 +52,7 @@ foreach ($arreglo as $row) {
        <td>" . $row['Pac_FecNac'] . "</td>
         <td>" . $row['Pac_sexo'] . "</td>";
 
-    $Status="";
+    $Status=""; //
       
       if($row['Status']=="activo"){
           $Status="activo";
