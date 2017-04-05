@@ -32,6 +32,7 @@ if(!verificar_usuario())
     include ('Mensaje.php');
     switch ($_GET['action'])
     {
+
         case 'verCitas':
             include('citas/verCitas.php');
             break;
