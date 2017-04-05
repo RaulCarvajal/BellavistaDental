@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../CSS/menuVerticalRecepcionista.css">
     <link rel="stylesheet" href="../CSS/styleIcons.css">
     <link type="text/css" rel="stylesheet" href="../CSS/imagen.css">
+    <link rel="icon" href="../IMG/blue.ico" />
 </head>
 <body>
 <h1>Bienvenido Recepcionista <span><img src="../IMG/logo.jpg" class="imagen"></h1>

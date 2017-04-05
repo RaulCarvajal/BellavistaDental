@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../CSS/menuVerticalDentista.css">
     <link rel="stylesheet" href="../CSS/styleIcons.css">
     <link type="text/css" rel="stylesheet" href="../CSS/imagen.css">
+    <link rel="icon" href="../IMG/blue.ico" />
 </head>
 <body>
 <h1>Bienvenido Dentista <span><img src="../IMG/logo.jpg" class="imagen"></span></h1>
