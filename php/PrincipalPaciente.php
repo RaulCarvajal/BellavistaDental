@@ -20,7 +20,7 @@ if(!verificar_usuario())
 <h1>Bienvenido Paciente <span><img src="../IMG/logo.jpg" class="imagen"></h1>
 <nav>
     <ul>
-        <li><a href="PrincipalPaciente.php"><span><i class="icon icon-home"></i></span> Inicio </a></li>
+        <li> <a href="PrincipalPaciente.php"><span><i class="icon icon-home"></i></span> Inicio </a></li>
         <li> <a href="PrincipalPaciente.php?action=verCitas"><span><i class="icon icon-address-book"></i></span>Citas</a> </li>
         <li> <a href="#"><span><i class="icon icon-file-text2"></i></span>Recetas</a></li>
         <li> <a href="controladores/salir.php"><span><i class="icon icon-cancel-circle"></i></span>Cerrar Sesión</a></li>
@@ -28,23 +28,20 @@ if(!verificar_usuario())
 </nav>
 
 <div id="areaFuncion">
-    <?php
-    include ('Mensaje.php');
-    switch ($_GET['action'])
-    {
-        case 'verCitas':
-            include('citas/verCitas.php');
-            break;
-
-        case 'agendaCita':
-            include('citas/agendaCita.php');
-            break;
-
-        default:
-            # code...
-            break;
-    }
-    ?>
+        <?php
+       include ('Mensaje.php');
+       switch ($_GET['action']) {
+           case 'verCitas':
+               include('citas/verCitas.php');
+               break;
+           case 'agendaCita':
+               include('citas/agendaCita.php');
+               break;
+           default:
+                   # code..
+                   break;
+       }
+       ?>
 </div>
 
 

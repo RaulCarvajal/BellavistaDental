@@ -7,11 +7,14 @@
     <link type="text/css" rel="stylesheet" href="../CSS/menuVerticalAdminitrador.css">
     <link type="text/css" rel="stylesheet" href="../CSS/styleIcons.css">
     <link type="text/css" rel="stylesheet" href="../CSS/imagen.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="consultas/funciones/manejador.js"></script>
     <link rel="icon" href="../IMG/blue.ico" />
 </head>
 <body>
 <?php
-    include ('php/Mensaje.php');
+    include ('Mensaje.php');
+    include('confirmar.php');
 ?>
 <h1>Opciones de administración<span><img src="../IMG/logo.jpg" class="imagen"></span></h1>
 <nav>

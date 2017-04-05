@@ -3,7 +3,7 @@
     <div class="w3-container w3-blue margenArriba ">
         <h1 class="text-center">Bienvenido a</h1>
         <img src="IMG/logo.jpg" class="center-block w3-round">
-        <h2 class="text-center">Inicio de sesión</h2>
+        <h2 class="text-center">Inicio de sesíon</h2>
         <link rel="icon" href="../IMG/blue.ico" />
     </div>
     <title>Iniciar Sesión</title>
