@@ -1,3 +1,4 @@
+<?php error_reporting(E_ERROR | E_PARSE); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
 <nav>
     <ul>
         <li><a href="PrincipalDentista.php"><span><i class="icon icon-home"></i></span> Inicio </a></li>
-        <li> <a href="#"><span><i class="icon icon-address-book"></i></span>Agenda</a> </li>
+        <li> <a href="PrincipalDentista.php?action=verAgendaDentista"><span><i class="icon icon-address-book"></i></span>Citas</a> </li>
         <li> <a href="#"><span><i class="icon icon-user"></i></span>Pacientes</a></li>
         <li> <a href="#"><span><i class="icon icon-file-text2"></i></span>Recetas</a></li>
         <li> <a href="#"><span><i class="icon icon-drawer2"></i></span>Inventario</a></li>
@@ -21,6 +22,19 @@
     </ul>
     <img src="">
 </nav>
+
+<div id="areaFuncion">
+    <?php
+    switch ($_GET['action']) {
+        case 'verAgendaDentista':
+            include('citas/verAgendaDentista.php');
+            break;
+        default:
+            # code..
+            break;
+    }
+    ?>
+</div>
 
 </body>
 </html>

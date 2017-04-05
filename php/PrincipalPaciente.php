@@ -1,4 +1,5 @@
-﻿<?php
+﻿<?php error_reporting(E_ERROR | E_PARSE); ?>
+<?php
 include('controladores/controlador_login.php');
 if(!verificar_usuario())
 {
