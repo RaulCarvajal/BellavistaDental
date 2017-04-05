@@ -13,4 +13,5 @@ $base="proyectodental";
 // PRIMERO ES RECOMENDABLE REALIZAR PRUEBAS CON UN IF
 	mysql_connect($servidor,$usuario,$contrasena);
 	mysql_select_db($base);
+
  ?>
