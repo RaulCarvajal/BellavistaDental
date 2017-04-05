@@ -14,7 +14,7 @@ h1{
 
 }
 nav {
-    width: 240px;
+    width: 220px;
     height: 700px;
     background: #0277BD;
 }
@@ -38,4 +38,77 @@ nav ul li:hover{
 }
 nav ul li:hover {
     color:black;
+}
+
+#areaFuncion
+{
+    background: white;
+    width: 84%;
+    height: 650px;
+    position: relative;
+    top:-70px;
+
+}
+
+nav,#areaFuncion
+{
+    display: inline-block;
+    float: left;
+}
+#areaFuncion h2{
+    text-align: center;
+    position: relative;
+
+}
+#areaFuncion select{
+    margin-left: 5%;
+
+}
+
+#areaFuncion table
+{
+    border: 1px solid black;
+    margin-left: 5%;
+    margin-top: 1%;
+    width: 90%;
+}
+
+#areaFuncion table th
+{
+    background: #0277BD;
+    color:white;
+}
+
+#areaFuncion table td
+{
+    border:1px solid black;
+}
+
+#areaFuncion table td a {
+    color:blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#areaFuncion form input,#areaFuncion form label,#areaFuncion form select
+{
+    display: block;
+    margin-left: 35%;
+    margin-top: 5px;
+}
+
+#areaFuncion form
+{
+    width: 50%;
+    border:1px solid black;
+    margin-left: 25%;
+}
+
+#areaFuncion form h2
+{
+    display: block;
+
+    background: #0277BD;
+    text-align: center;
+    color: white;
 }

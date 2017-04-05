@@ -132,3 +132,28 @@ function agendaCita(hora,dentista) {
 
 }
 
+function agenda_cita(hora,dentista) {
+    var formData = new FormData(document.getElementById('formFecha'));
+    formData.append("hora",hora);
+    formData.append("dentista",dentista);
+    $.ajax({
+        url:"consultas/funciones/ingresaCita.php",
+        type:"post",
+        datatype:'html',
+        data:formData,
+        cache:false,
+        contentType:false,
+        processData:false
+    })
+
+        .done(function (res) {
+            $('#mensaje').animate({
+                top:'0%'
+            });
+            var resultado=res.split("-");
+            direccion=resultado[1];
+            var padre=document.getElementById('cuerpoMensaje');
+            padre.innerHTML=resultado[0];
+        })
+
+}
