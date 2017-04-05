@@ -11,6 +11,7 @@
     <link rel="icon" href="../IMG/blue.ico" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="consultas/funciones/manejador.js"></script>
+
 </head>
 <body>
 <h1>Bienvenido Recepcionista <span><img src="../IMG/logo.jpg" class="imagen"></h1>
