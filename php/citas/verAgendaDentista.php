@@ -10,10 +10,10 @@ from citas, pacientes
 WHERE citas.idPacientes = pacientes.idPacientes
 and citas.idDentistas=2 -->
 <?php
-$sql="select fecha, hora, pac_nombre, asunto
-from citas, pacientes
-where citas.idPacientes = pacientes.idPacientes
-and citas.idDentista=2";
+$sql="select fecha, hora, nombre_dentista, asunto
+from citas 
+inner join dentistas on dentistas.idDentistas=citas.idDentistas
+where idPacientes=".$_SESSION['idPacientes']." and status='activa'";
 
 $result=mysql_query($sql);
 while($array=mysql_fetch_array($result)){
@@ -22,7 +22,7 @@ while($array=mysql_fetch_array($result)){
 foreach ($arreglo as $row){
     echo("Fecha: ".$row['fecha']."<br>");
     echo("Hora: ".$row['hora']."<br>");
-    echo("Paciente: ".$row['Nombre_paciente']."<br>");
+    echo("Dentista: ".$row['nombre_dentista']."<br>");
     echo("Asunto: ".$row['asunto']."<br>");
 }
 ?>
