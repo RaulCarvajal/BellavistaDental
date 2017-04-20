@@ -2,8 +2,7 @@
 error_reporting(E_ERROR|E_PARSE);
 include ('conexion.php');
 ?>
-<h2>Tus Citas</h2>
-
+<h2>NO SE MUESTRA LA PINCHE CONSULTA</h2>
 
 <!--SELECT fecha, hora, pac_nombre, asunto
 from citas, pacientes
