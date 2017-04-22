@@ -16,7 +16,7 @@
 <nav>
     <ul>
         <li><a href="PrincipalDentista.php"><span><i class="icon icon-home"></i></span> Inicio </a></li>
-        <li> <a href="PrincipalDentista.php?action=verCitas"><span><i class="icon icon-address-book"></i></span>Citas</a> </li>
+        <li> <a href="PrincipalDentista.php?action=verAgendaDentista"><span><i class="icon icon-address-book"></i></span>Citas</a> </li>
         <li> <a href="#"><span><i class="icon icon-user"></i></span>Pacientes</a></li>
         <li> <a href="#"><span><i class="icon icon-file-text2"></i></span>Recetas</a></li>
         <li> <a href="#"><span><i class="icon icon-drawer2"></i></span>Inventario</a></li>
@@ -29,8 +29,11 @@
     <?php
     include ('Mensaje.php');
     switch ($_GET['action']) {
-        case 'verCitas':
+        case 'verAgendaDentista':
             include('citas/verAgendaDentista.php');
+            break;
+        case 'verRecetas':
+            include('citas/verReceta');
             break;
         default:
             # code..

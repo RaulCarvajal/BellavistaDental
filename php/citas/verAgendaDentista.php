@@ -12,13 +12,13 @@ where idPacientes=".$_SESSION['idPacientes']." and status='activa'
 $sql="SELECT fecha, hora, pac_nombre, asunto
 from citas, pacientes
 WHERE citas.idPacientes = pacientes.idPacientes
-and citas.idDentistas=2 ";
+and citas.idDentistas=2 and status='activa' ";
 -->
 <?php
 $sql="SELECT fecha, hora, pac_nombre, asunto
 from citas, pacientes
 WHERE citas.idPacientes = pacientes.idPacientes
-and citas.idDentistas=".$_SESSION['idPacientes']." and status='activa'";
+and citas.idDentistas=2 and status='activa' ";
 
 $result=mysql_query($sql);
 while($array=mysql_fetch_array($result)){
