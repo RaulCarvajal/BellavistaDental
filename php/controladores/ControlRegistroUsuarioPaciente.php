@@ -3,8 +3,8 @@ include('../conexion.php');
 $txtuser=$_POST['txtuser']; /*nombre para iniciar sesión tabla usuarios*/
 $txtcontrasena=$_POST['txtcontrasena'];
 //TABLA PACIENTES
-$txtnombrepac=$_POST['txtnombrepac'];
-$txtapellido=$_POST['txtapellido'];
+$txtnombrepac=strtoupper($_POST['txtnombrepac']);
+$txtapellido=strtoupper($_POST['txtapellido']);
 $txtcorreo=$_POST['txtcorreo'];
 $txttelefono=$_POST['txttelefono'];
 $txtfecnac=$_POST['txtfecnac'];
