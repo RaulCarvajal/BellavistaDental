@@ -30,10 +30,7 @@
     include ('Mensaje.php');
     switch ($_GET['action']) {
         case 'verCitas':
-            include('citas/verCitas.php');
-            break;
-        case 'agendaCita':
-            include('citas/agendaCita.php');
+            include('citas/verAgendaDentista.php');
             break;
         default:
             # code..
