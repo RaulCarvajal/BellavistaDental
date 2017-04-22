@@ -2,17 +2,23 @@
 error_reporting(E_ERROR|E_PARSE);
 include ('conexion.php');
 ?>
-<h2>NO SE MUESTRA LA PINCHE CONSULTA</h2>
+<h2>Consultas asignadas</h2>
 
 <!--select fecha, hora, nombre_dentista, asunto
 from citas
 inner join dentistas on dentistas.idDentistas=citas.idDentistas
-where idPacientes=".$_SESSION['idPacientes']." and status='activa' -->
-<?php
+where idPacientes=".$_SESSION['idPacientes']." and status='activa'
+
 $sql="SELECT fecha, hora, pac_nombre, asunto
 from citas, pacientes
 WHERE citas.idPacientes = pacientes.idPacientes
 and citas.idDentistas=2 ";
+-->
+<?php
+$sql="SELECT fecha, hora, pac_nombre, asunto
+from citas, pacientes
+WHERE citas.idPacientes = pacientes.idPacientes
+and citas.idDentistas=".$_SESSION['idPacientes']." and status='activa'";
 
 $result=mysql_query($sql);
 while($array=mysql_fetch_array($result)){
