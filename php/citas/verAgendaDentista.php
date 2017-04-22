@@ -4,10 +4,10 @@ include ('conexion.php');
 ?>
 <h2>NO SE MUESTRA LA PINCHE CONSULTA</h2>
 
-<!--SELECT fecha, hora, pac_nombre, asunto
-from citas, pacientes
-WHERE citas.idPacientes = pacientes.idPacientes
-and citas.idDentistas=2 -->
+<!--select fecha, hora, nombre_dentista, asunto
+from citas
+inner join dentistas on dentistas.idDentistas=citas.idDentistas
+where idPacientes=".$_SESSION['idPacientes']." and status='activa' -->
 <?php
 $sql="SELECT fecha, hora, pac_nombre, asunto
 from citas, pacientes
@@ -21,7 +21,7 @@ while($array=mysql_fetch_array($result)){
 foreach ($arreglo as $row){
     echo("Fecha: ".$row['fecha']."<br>");
     echo("Hora: ".$row['hora']."<br>");
-    echo("Paciente: ".$row['nombre_dentista']."<br>");
+    echo("Paciente: ".$row['pac_nombre']."<br>");
     echo("Asunto: ".$row['asunto']."<br>");
 }
 ?>
