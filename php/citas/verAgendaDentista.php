@@ -29,6 +29,9 @@ foreach ($arreglo as $row){
     echo("Hora: ".$row['hora']."<br>");
     echo("Paciente: ".$row['pac_nombre']."<br>");
     echo("Asunto: ".$row['asunto']."<br>");
+    echo("<a href='PrincipalPaciente.php?action=agendaCita'>Asignar Receta</a>"." ");
+    echo("<a href='PrincipalPaciente.php?action=agendaCita'>Ver Odontograma</a>");
 }
 ?>
+
 
