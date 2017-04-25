@@ -16,10 +16,11 @@ and citas.idDentistas=2 and status='activa' ";
 -->
 <?php
 $sql="SELECT fecha, hora, pac_nombre, asunto
-from citas, pacientes
-WHERE citas.idPacientes = pacientes.idPacientes
-and citas.idDentistas=2 and status='activa' ";
-
+from citas
+inner join pacientes on citas.idPacientes = pacientes.idPacientes
+where idDentistas=2 and status='activa' ";
+// necesito hacer la consulta haciendo que el dentista logueado vea los pacientes registrados
+//where idDentistas=".$_SESSION['idDentistas']." and status='activa' ";
 $result=mysql_query($sql);
 while($array=mysql_fetch_array($result)){
     $arreglo[]=$array;
