@@ -42,7 +42,14 @@ if($row['TipoUsuario']=="1") {
 }
 
     if($row['TipoUsuario']=="2") {
-        header("location:../PrincipalDentista.php");
+         $sql="select  CONCAT(Nombre_Dentista,' ',Apellido_Dentista) as nombre from dentistas
+    inner join usuarios
+    on usuarios.idUsuarios=dentistas.idUsuarios
+    where nombre_usuario='$usuario' and contrasena ='$clave' ";
+    $result=mysql_query($sql);
+    $id=mysql_fetch_array($result);
+    $_SESSION['dentista']=$id['nombre'];
+    header("location:../PrincipalDentista.php");
     }
 
     if($row['TipoUsuario']=="3") {

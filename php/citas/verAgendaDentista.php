@@ -32,8 +32,6 @@ echo("<table>
 	<th>Hora</th>
 	<th>Paciente</th>
 	<th>Asunto</th>
-	<th>Receta</th>
-	<th>Odontograma</th>
 	   </thead>
 </tr>");
 foreach ($arreglo as $row){
@@ -41,9 +39,7 @@ foreach ($arreglo as $row){
       <td>".$row['fecha']."</td>
       <td>".$row['hora']."</td>
       <td>".$row['pac_nombre']."</td>
-      <td>".$row['asunto']."</td>
-      <td><a href='PrincipalPaciente.php?action=agendaCita'>Asignar Receta</a></td>
-      <td><a href='PrincipalPaciente.php?action=agendaCita'>Asignar Odontograma</a></td>";
+      <td>".$row['asunto']."</td>";
     echo("</tr>");
 }
 echo("</table>");
