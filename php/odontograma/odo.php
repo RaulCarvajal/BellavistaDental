@@ -4,7 +4,7 @@
 <script>
 	$(document).ready(function(e) {
     $('#odo').click(function(e) {
-      //alert(e.pageX+ ' , ' + e.pageY);
+      alert(e.pageX+ ' , ' + e.pageY);
       if((e.pageX>=680&&e.pageX<=710)&&(e.pageY>=343&&e.pageY<=375))
       {
        mostrarDetalle(1,<?php echo($_GET['id']) ?>);
@@ -50,7 +50,7 @@
        mostrarDetalle(8,<?php echo($_GET['id']) ?>);
       }
 
-      if((e.pageX>=817&&e.pageX<=841)&&(e.pageY>=156&&e.pageY<=152))
+      if((e.pageX>=812&&e.pageX<=841)&&(e.pageY>=156&&e.pageY<=187))
       {
        mostrarDetalle(9,<?php echo($_GET['id']) ?>);
       }
@@ -60,16 +60,18 @@
        mostrarDetalle(10,<?php echo($_GET['id']) ?>);
       }
 
-      if((e.pageX>=680&&e.pageX<=726)&&(e.pageY>=262&&e.pageY<=292))
+      if((e.pageX>=871&&e.pageX<=897)&&(e.pageY>=169&&e.pageY<=194))
       {
        mostrarDetalle(11,<?php echo($_GET['id']) ?>);
       }
-      if((e.pageX>=871&&e.pageX<=897)&&(e.pageY>=174&&e.pageY<=194))
+
+      if((e.pageX>=844&&e.pageX<=912)&&(e.pageY>=197&&e.pageY<=226))
       {
-       mostrarDetalle(12,<?php echo($_GET['id']) ?>);
+          mostrarDetalle(12,<?php echo($_GET['id']) ?>);
       }
 
-      if((e.pageX>=893&&e.pageX<=910)&&(e.pageY>=230&&e.pageY<=250))
+
+      if((e.pageX>=893&&e.pageX<=910)&&(e.pageY>=230&&e.pageY<=253))
       {
        mostrarDetalle(13,<?php echo($_GET['id']) ?>);
        
@@ -92,8 +94,78 @@
       {
        mostrarDetalle(16,<?php echo($_GET['id']) ?>);
       }
-      
-      
+
+      if((e.pageX>=669&&e.pageX<=740)&&(e.pageY>=433&&e.pageY<=468))
+      {
+            mostrarDetalle(17,<?php echo($_GET['id']) ?>);
+      }
+
+      if((e.pageX>=688&&e.pageX<=716)&&(e.pageY>=473&&e.pageY<=509))
+      {
+            mostrarDetalle(18,<?php echo($_GET['id']) ?>);
+      }
+
+        if((e.pageX>=680&&e.pageX<=724)&&(e.pageY>=510&&e.pageY<=548))
+        {
+            mostrarDetalle(19,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=701&&e.pageX<=730)&&(e.pageY>=552&&e.pageY<=580))
+        {
+            mostrarDetalle(20,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=716&&e.pageX<=742)&&(e.pageY>=582&&e.pageY<=610))
+        {
+            mostrarDetalle(21,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=732&&e.pageX<=764)&&(e.pageY>=606&&e.pageY<=640))
+        {
+            mostrarDetalle(22,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=760&&e.pageX<=784)&&(e.pageY>=614&&e.pageY<=642))
+        {
+            mostrarDetalle(23,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=786&&e.pageX<=809)&&(e.pageY>=614&&e.pageY<=647))
+        {
+            mostrarDetalle(24,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=812&&e.pageX<=833)&&(e.pageY>=617&&e.pageY<=647))
+        {
+            mostrarDetalle(25,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=836&&e.pageX<=858)&&(e.pageY>=613&&e.pageY<=642))
+        {
+            mostrarDetalle(26,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=856&&e.pageX<=886)&&(e.pageY>=602&&e.pageY<=640))
+        {
+            mostrarDetalle(27,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=873&&e.pageX<=902)&&(e.pageY>=578&&e.pageY<=607))
+        {
+            mostrarDetalle(28,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=885&&e.pageX<=912)&&(e.pageY>=549&&e.pageY<=578))
+        {
+            mostrarDetalle(29,<?php echo($_GET['id']) ?>);
+        }
+
+        if((e.pageX>=888&&e.pageX<=928)&&(e.pageY>=509&&e.pageY<=547))
+        {
+            mostrarDetalle(30,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=902&&e.pageX<=934)&&(e.pageY>=469&&e.pageY<=506))
+        {
+            mostrarDetalle(31,<?php echo($_GET['id']) ?>);
+        }
+        if((e.pageX>=904&&e.pageX<=941)&&(e.pageY>=429&&e.pageY<=466))
+        {
+            mostrarDetalle(32,<?php echo($_GET['id']) ?>);
+        }
+        
+
+
+
 
     });   
 
